@@ -1,17 +1,35 @@
-# Robin Gautam: portfolio
+# robin-portfolio
 
-A static site with no build step: `index.html`, `styles.css`, `script.js`, `favicon.svg`, the `fonts` folder, the CV (`Robin-Gautam-CV.pdf`) and its picture (`cv-preview.jpg`).
+Personal site of **Robin Gautam**, MBA at IIM Rohtak (2025–27): B2B sales, marketing, product and strategy.
 
-## Add your photo
+Static HTML, CSS and a little vanilla JavaScript. No build step, no framework, no tracking.
 
-Save your portrait as `robin.jpg` in this folder (portrait shape, about 800 × 1000 px). Until then the page shows your initials in its place.
+## Run locally
 
-## Update the CV
+```bash
+python3 -m http.server 8000
+# open http://localhost:8000
+```
 
-Replace `Robin-Gautam-CV.pdf` and `cv-preview.jpg`, keeping the same file names.
+## Deploy on Vercel
 
-## Put it online
+1. Import this repository in Vercel.
+2. Framework preset: **Other**. Leave the build command and output directory empty.
+3. Deploy. Every push to `main` redeploys.
 
-On Vercel: Add New → Project → import this repository → Framework Preset "Other" → Deploy. Then add robingautam.in under Settings → Domains.
+## Add the photo
 
-Fonts: Source Serif 4 and Albert Sans (SIL Open Font License), via Fontsource, hosted with the site.
+Save a square portrait as `robin.jpg` (at least 256 × 256 px) in the repository root. Until the file exists, the photo slot removes itself.
+
+## What is on the page
+
+- Sticky identity column with a section menu that follows the reader.
+- "Hiring for" chips: a recruiter picks Sales, Marketing, Product or Strategy and the most relevant work is highlighted (nothing is hidden).
+- Highlights that count up once, project thumbnails drawn from real figures, and a soft light that follows the pointer on desktop.
+- All motion uses transform and opacity, stays under a second, and switches off for people who set "reduce motion".
+
+## Credits
+
+- Layout pattern (sticky left column, scrolling evidence on the right) inspired by [Brittany Chiang's portfolio](https://brittanychiang.com).
+- Type: [Source Serif 4](https://github.com/adobe-fonts/source-serif) and [Albert Sans](https://github.com/usted/AlbertSans), both SIL Open Font License, self-hosted from Fontsource.
+- Built with Claude Code.
