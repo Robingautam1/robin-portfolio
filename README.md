@@ -1,25 +1,17 @@
 # Robin Gautam: portfolio
 
-A static site: `index.html`, `styles.css`, `script.js`, `favicon.svg` and the `fonts` folder. No build step and no packages.
+A static site with no build step: `index.html`, `styles.css`, `script.js`, `favicon.svg`, the `fonts` folder, the CV (`Robin-Gautam-CV.pdf`) and its picture (`cv-preview.jpg`).
 
-## What's in here
+## Add your photo
 
-1. **Your CV** is `Robin-Gautam-CV.pdf`, and `cv-preview.jpg` is its picture on the page. To update the CV, replace both files with the same names.
-2. **LinkedIn** is already linked (linkedin.com/in/robin-gautam-066ba8233). To change it, search `index.html` for `linkedin.com` (it appears twice).
+Save your portrait as `robin.jpg` in this folder (portrait shape, about 800 × 1000 px). Until then the page shows your initials in its place.
 
-## Put it online (GitHub, then Vercel)
+## Update the CV
 
-1. On GitHub, create a new repository (for example `portfolio`). Choose "uploading an existing file", drag in every file and the `fonts` folder, and commit.
-2. On Vercel, choose Add New, then Project, and import that repository. Set Framework Preset to "Other", leave the build command empty, and deploy.
-3. To use robingautam.in, go to the project's Settings, then Domains, add the domain, and copy the DNS records Vercel shows into your domain registrar.
+Replace `Robin-Gautam-CV.pdf` and `cv-preview.jpg`, keeping the same file names.
 
-From then on, every change you commit on GitHub goes live on its own.
+## Put it online
 
-## Changing the content
+On Vercel: Add New → Project → import this repository → Framework Preset "Other" → Deploy. Then add robingautam.in under Settings → Domains.
 
-- All the words are in `index.html`. The numbers in the "Pick the role you're filling" switcher sit in the section marked `PROOF, BY ROLE`.
-- Colours and sizes are at the top of `styles.css` (`--accent` is the blue).
-
-## Fonts
-
-Imbue and Albert Sans, both under the SIL Open Font License, taken from Fontsource and hosted with the site, so nothing loads from Google.
+Fonts: Source Serif 4 and Albert Sans (SIL Open Font License), via Fontsource, hosted with the site.
