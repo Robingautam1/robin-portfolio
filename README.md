@@ -1,6 +1,6 @@
 # robin-portfolio
 
-Personal site of **Robin Gautam**, MBA at IIM Rohtak (2025–27): B2B sales, marketing, product and strategy.
+Personal site of **Robin Gautam**, MBA student at IIM Rohtak (2025–27): B2B sales, partnerships, marketing and product.
 
 Static HTML, CSS and a little vanilla JavaScript. No build step, no framework, no tracking.
 
@@ -19,17 +19,15 @@ python3 -m http.server 8000
 
 ## Add the photo
 
-Save a square portrait as `robin.jpg` (at least 256 × 256 px) in the repository root. Until the file exists, the photo slot removes itself.
+Save a portrait as `robin.jpg` (about 800 × 960 px) in the repository root. It appears as a polaroid in the Background section. Until the file exists, the slot removes itself.
 
 ## What is on the page
 
-- Sticky identity column with a section menu that follows the reader.
-- "Hiring for" chips: a recruiter picks Sales, Marketing, Product or Strategy and the most relevant work is highlighted (nothing is hidden).
-- Highlights that count up once, project thumbnails drawn from real figures, and a soft light that follows the pointer on desktop.
-- All motion uses transform and opacity, stays under a second, and switches off for people who set "reduce motion".
+- A postcard from Rohtak (the robin is a magpie robin, Haryana's fields behind it). Click it to turn it over and read a note to the hiring team, postmarked with today's date.
+- Work shown as the paper it left behind: a sales record, an event ticket, an appointment card, a morning paper, a cost receipt and a phone message pad. All drawn in HTML and CSS, so they stay sharp at any size.
+- Notes that open under each piece of work, numbers that count up once, and gentle entrances. Motion switches off for people who set "reduce motion".
 
 ## Credits
 
-- Layout pattern (sticky left column, scrolling evidence on the right) inspired by [Brittany Chiang's portfolio](https://brittanychiang.com).
-- Type: [Source Serif 4](https://github.com/adobe-fonts/source-serif) and [Albert Sans](https://github.com/usted/AlbertSans), both SIL Open Font License, self-hosted from Fontsource.
+- Type: [Instrument Serif](https://github.com/Instrument/instrument-serif), [DM Sans](https://github.com/googlefonts/dm-fonts) and [Courier Prime](https://github.com/quoteunquoteapps/CourierPrime), all SIL Open Font License, self-hosted from Fontsource.
 - Built with Claude Code.
