@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Robin Gautam · MBA, IIM Rohtak · B2B sales, marketing and product</title>
-  <meta name="description" content="Robin Gautam, MBA candidate at IIM Rohtak (class of 2027), available from March 2027 for roles in B2B sales, marketing and product. Closed ₹3.5 lakh in B2B revenue as a sales intern and built live websites and AI tools for small businesses.">
+  <meta name="description" content="Robin Gautam, MBA candidate at IIM Rohtak (class of 2027), available from March 2027 for roles in B2B sales, marketing and product. Closed ₹3.5 lakh of B2B business as a sales intern; builds AI tools such as Role Radar and WorkHub.">
   <meta name="theme-color" content="#f4f1e9">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Robin Gautam · MBA, IIM Rohtak">
@@ -137,14 +137,17 @@ h3{font-size:clamp(2.5rem,3.9vw,4.2rem);line-height:1;letter-spacing:-.035em;tex
 .campus-ticket span{font:.82rem/1.5 var(--mono);text-transform:uppercase;letter-spacing:.05em}
 .campus-ticket b{display:block;margin:8px 0;padding:8px 0;border-block:1px solid #ad805d;font:400 clamp(3rem,6.6vw,6.5rem)/1 var(--serif)}
 .ticket-tear{border-top:2px dashed #bc8c64;margin:16px -18px 0;padding:10px}
-.clinic{background:#a9c6c7}
-.garment{background:#dabbab}
-.site-print{width:86%;display:block;background:#fff;box-shadow:4px 8px 18px #1c28252a;transform:rotate(-2deg);transition:transform .4s var(--ease)}
-.site-print:hover,.site-print:focus-visible{transform:rotate(0) translateY(-4px)}
-.site-print img{display:block;width:100%;height:auto}
-.browser-strip{display:flex;align-items:center;gap:9px;padding:9px 12px;font:.72rem var(--mono);color:#37473c;background:#f5f5ec}
-.browser-strip i{width:6px;height:6px;border-radius:50%;background:#809784}
-.browser-strip span{margin-left:auto;opacity:.7}
+.research{background-color:#b9c7d2;background-image:radial-gradient(#4d627533 1.3px,transparent 1.5px);background-size:16px 16px}
+.mapcard{width:min(76%,370px);background:#f8f5ea;color:#26323d;padding:18px 20px 16px;transform:rotate(-4deg);box-shadow:5px 7px #dfe2d8,7px 10px #8396a6,12px 19px 24px #26323d33;transition:transform .6s var(--ease)}
+.dossier:hover .mapcard{transform:rotate(-2deg) translateY(-4px)}
+.map-head{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:9px;border-bottom:1px solid #8a98a5}
+.map-head span:first-child{font:1.35rem var(--serif)}
+.map-head span:last-child,.map-foot span,.map-ring b{font:.72rem/1.4 var(--mono);text-transform:uppercase;letter-spacing:.06em}
+.map{position:relative;aspect-ratio:1.55;margin:14px 0 12px 6px;border-left:1.5px solid #26323d;border-bottom:1.5px solid #26323d;background:linear-gradient(90deg,transparent calc(50% - .5px),#26323d33 calc(50% - .5px) calc(50% + .5px),transparent calc(50% + .5px)),linear-gradient(transparent calc(50% - .5px),#26323d33 calc(50% - .5px) calc(50% + .5px),transparent calc(50% + .5px))}
+.map i{position:absolute;width:7px;height:7px;margin:-3.5px 0 0 -3.5px;border-radius:50%;background:#26323d}
+.map-ring{position:absolute;border:1.5px dashed var(--red);border-radius:50%}
+.map-ring b{position:absolute;top:-1.5em;left:50%;transform:translateX(-50%);font-weight:400;color:var(--red);white-space:nowrap}
+.map-foot{display:flex;justify-content:space-between;gap:8px;padding-top:9px;border-top:1px dashed #8a98a5}
 .case-copy{padding:clamp(26px,3.6vw,54px);align-self:center}
 .case-copy .category{color:var(--red);margin:0 0 15px}
 .case-copy>p:not(.meta){font-size:1.05rem;line-height:1.65;color:var(--soft);margin:17px 0;text-wrap:pretty}
@@ -153,22 +156,77 @@ h3{font-size:clamp(2.5rem,3.9vw,4.2rem);line-height:1;letter-spacing:-.035em;tex
 .case-facts dd{color:var(--soft);font-size:.92rem;line-height:1.4;margin-top:3px}
 .skills{display:flex;flex-wrap:wrap;gap:7px}
 .skills li{padding:5px 12px;border-radius:20px;background:#ece8dc;color:var(--soft);font-size:.83rem}
-.project-actions{display:flex;align-items:center;flex-wrap:wrap;gap:12px 20px;margin-top:22px}
 
 /* ---------- tools ---------- */
 .built{padding:64px 0 76px}
-.tools{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.tool{display:flex;flex-direction:column;border:1px solid var(--rule);background:var(--card);padding:28px 28px 26px;transition:border-color .25s,transform .4s var(--ease)}
-.tool:hover{border-color:#b9b3a3;transform:translateY(-3px)}
+.tools{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.tool{display:flex;flex-direction:column;border:1px solid var(--rule);background:var(--card);overflow:hidden}
+.tool-art{position:relative;aspect-ratio:5/4;display:grid;place-items:center;overflow:hidden;isolation:isolate;container-type:inline-size}
+.tool-art::after{content:"";position:absolute;inset:0;background:url("grain.png");opacity:.09;mix-blend-mode:multiply;pointer-events:none}
+.tool-art>*{transition:transform .6s var(--ease)}
+.tool:hover .tool-art>*{transform:rotate(0) translateY(-4px)}
+.tool-body{display:flex;flex-direction:column;flex:1;padding:24px 26px 26px}
 .tool .meta{color:var(--red)}
-.tool h3{font-size:clamp(2rem,2.6vw,2.6rem);margin-top:12px}
-.tool-figure{display:flex;align-items:baseline;gap:10px;margin:22px 0 4px;padding-top:18px;border-top:1px solid var(--rule)}
-.tool-figure b{font:400 3.2rem/1 var(--serif);letter-spacing:-.03em;color:var(--red);white-space:nowrap}
+.tool h3{font-size:clamp(2.1rem,2.6vw,2.6rem);margin-top:10px}
+.tool-figure{display:flex;align-items:baseline;gap:10px;margin-top:14px}
+.tool-figure b{font:400 2.4rem/1 var(--serif);letter-spacing:-.03em;color:var(--red);white-space:nowrap}
 .tool-figure .inr{font-size:.7em}
-.tool-figure span{font-size:.92rem;line-height:1.35;color:var(--soft);max-width:12em}
-.tool p{margin-top:14px;font-size:1rem;line-height:1.6;color:var(--soft);text-wrap:pretty}
+.tool-figure span{font-size:.9rem;line-height:1.35;color:var(--soft)}
+.tool-body p{margin-top:12px;font-size:1rem;line-height:1.6;color:var(--soft);text-wrap:pretty}
 .tool .note{font-size:.92rem;color:var(--muted);padding-left:12px;border-left:2px solid #d9b2a6}
 .tool .skills{margin-top:auto;padding-top:20px}
+.paper-shadow{box-shadow:4px 6px #00000012,10px 18px 26px #1f1d1633}
+
+/* Role Radar: the morning email */
+.art-radar{background-color:#dfc78e;background-image:repeating-linear-gradient(0deg,#7d5f1e18 0 1px,transparent 1px 22px)}
+.digest{width:76cqw;background:#fbf8ec;color:#2a2a22;padding:4.2cqw 4.6cqw 3.6cqw;transform:rotate(-3deg)}
+.digest-head{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:2cqw;border-bottom:2px solid #2a2a22}
+.digest-head span:first-child{font:6.6cqw/1 var(--serif);letter-spacing:-.02em}
+.digest-head span:last-child,.digest-date,.digest-foot{font:2.4cqw/1.4 var(--mono);text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
+.digest-date{color:#6a685b;margin:1.8cqw 0 1cqw}
+.digest ol{margin:0;padding:0;list-style:none}
+.digest li{display:flex;justify-content:space-between;align-items:center;gap:3cqw;padding:1.7cqw 0;border-top:1px solid #2a2a221f}
+.digest li:first-child{border-top:0}
+.digest li b{display:block;font-size:3.2cqw;line-height:1.2;font-weight:600;white-space:nowrap}
+.digest li small{display:block;font-size:2.5cqw;color:#6a685b;margin-top:.3cqw}
+.fit{display:flex;align-items:center;gap:1.8cqw;font:2.7cqw var(--mono);flex:none}
+.fit i{position:relative;width:13cqw;height:1.5cqw;border-radius:2px;background:#2a2a221c;overflow:hidden}
+.fit i::after{content:"";position:absolute;inset:0;width:calc(var(--f)*100%);background:var(--red);transform-origin:left;transition:transform 1s var(--ease) var(--d,0s)}
+.digest-foot{margin-top:1.6cqw;padding-top:2cqw;border-top:1px dashed #2a2a2240;color:var(--red)}
+
+/* WorkHub: one week of report costs */
+.art-cost{background-color:#31473c;background-image:linear-gradient(#ffffff0d 1px,transparent 1px),linear-gradient(90deg,#ffffff0d 1px,transparent 1px);background-size:24px 24px}
+.costcard{width:76cqw;background:#f6f1e3;color:#24291f;padding:4.6cqw 5cqw 4cqw;transform:rotate(2.5deg)}
+.cc-head{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:2cqw;border-bottom:2px solid #24291f}
+.cc-head span:first-child{font:7.4cqw/1 var(--serif);letter-spacing:-.02em}
+.cc-head span:last-child,.cc-days,.cc-key{font:2.5cqw/1.4 var(--mono);text-transform:uppercase;letter-spacing:.06em}
+.cc-bars{display:grid;grid-template-columns:repeat(7,1fr);gap:2.6cqw;align-items:end;height:27cqw;margin-top:4cqw;padding:0 1cqw;border-bottom:1.5px solid #24291f}
+.cc-bars i{display:block;height:calc(var(--v)/3.4*100%);min-height:2px;background:#9aa394;border-radius:2px 2px 0 0;transform-origin:bottom;transition:transform .9s var(--ease) var(--d,0s)}
+.cc-bars i.after{background:var(--red)}
+.cc-days{display:grid;grid-template-columns:repeat(7,1fr);gap:2.6cqw;padding:1.2cqw 1cqw 0;text-align:center;color:#6a685b}
+.cc-key{display:flex;justify-content:space-between;align-items:baseline;margin-top:2.6cqw;padding-top:2cqw;border-top:1px dashed #24291f40}
+.cc-key b{font:400 5.6cqw/1 var(--serif);letter-spacing:-.02em;text-transform:none;color:var(--red)}
+
+/* Clinic receptionist: a booked call */
+.art-call{background-color:#a9c4c3;background-image:repeating-radial-gradient(circle at 12% -10%,transparent 0 16px,#2f4f5122 17px 18px)}
+.callcard{width:74cqw;background:#fbfaf4;color:#24291f;padding:3.6cqw 4.2cqw 3.2cqw;border-radius:2.2cqw;transform:rotate(-2deg)}
+.call-head{display:flex;align-items:center;gap:2cqw;padding-bottom:2.4cqw;border-bottom:1px solid #24291f1a;font:2.6cqw/1.4 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:#3d4a45}
+.call-head i{width:2cqw;height:2cqw;border-radius:50%;background:#3f8a5a;box-shadow:0 0 0 .8cqw #3f8a5a2e}
+.who{display:block;margin-top:2.2cqw;font:2.3cqw/1.3 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:#6a6f66}
+.who.right{text-align:right}
+.bubble{width:fit-content;max-width:90%;margin-top:.8cqw;padding:2cqw 2.8cqw;border-radius:3cqw;font-size:3cqw;line-height:1.35;transition:opacity .5s var(--ease) var(--d,0s),transform .6s var(--ease) var(--d,0s)}
+.bubble.caller{background:#e6ebe3;border-bottom-left-radius:.8cqw}
+.bubble.agent{margin-left:auto;background:var(--pine);color:#f4f1e9;border-bottom-right-radius:.8cqw}
+.call-done{display:flex;justify-content:space-between;align-items:center;margin-top:3cqw;padding-top:2.4cqw;border-top:1px dashed #24291f33;font:2.6cqw/1.4 var(--mono);text-transform:uppercase;letter-spacing:.06em}
+.call-done span:first-child{color:#2f6b45}
+.call-done span:first-child::before{content:"";display:inline-block;width:1.4cqw;height:2.6cqw;margin:0 1.6cqw .3cqw .4cqw;border:solid #2f6b45;border-width:0 .5cqw .5cqw 0;transform:rotate(45deg)}
+
+/* the drawings settle in when the cards scroll into view */
+@media (prefers-reduced-motion:no-preference){
+  .js .tool.reveal:not(.in) .fit i::after{transform:scaleX(0)}
+  .js .tool.reveal:not(.in) .cc-bars i{transform:scaleY(0)}
+  .js .tool.reveal:not(.in) .bubble{opacity:0;transform:translateY(8px)}
+}
 
 /* ---------- campus ---------- */
 .campus-section{background:var(--band);border-block:1px solid var(--rule)}
@@ -239,10 +297,14 @@ h3{font-size:clamp(2.5rem,3.9vw,4.2rem);line-height:1;letter-spacing:-.035em;tex
 
 /* ---------- responsive ---------- */
 @media (max-width:1000px){
-  .tools{grid-template-columns:1fr;max-width:640px}
+  .tools{grid-template-columns:1fr}
   .glance-grid{grid-template-columns:1fr 1fr}
   .glance-grid>div:nth-child(3){border-left:0;padding-left:0}
   .glance-grid>div:nth-child(n+3){border-top:1px solid var(--rule)}
+}
+@media (min-width:700px) and (max-width:1000px){
+  .tool{display:grid;grid-template-columns:1fr 1fr}
+  .tool-art{aspect-ratio:auto;min-height:100%}
 }
 @media (max-width:850px){
   .shell{width:90%}
@@ -259,7 +321,6 @@ h3{font-size:clamp(2.5rem,3.9vw,4.2rem);line-height:1;letter-spacing:-.035em;tex
 @media (max-width:760px){
   .dossier{grid-template-columns:1fr}
   .exhibit{min-height:280px;padding-block:28px}
-  .web-exhibit{min-height:0}
   .case-copy h3 br{display:none}
   .ledger{padding:15px 18px}
   .ledger-total{font-size:3.4rem}
@@ -293,7 +354,7 @@ h3{font-size:clamp(2.5rem,3.9vw,4.2rem);line-height:1;letter-spacing:-.035em;tex
   .campus-facts{grid-template-columns:repeat(3,1fr);gap:12px}
   .campus-facts dt{font-size:1.6rem}
   .campus-facts dd{font-size:.82rem}
-  .tool{padding:24px 22px}
+  .tool-body{padding:22px 22px 24px}
   .background{padding-block:50px 56px}
   .timeline>div{grid-template-columns:70px 1fr;gap:12px}
   .contact{padding-block:48px 52px}
@@ -320,7 +381,7 @@ h3{font-size:clamp(2.5rem,3.9vw,4.2rem);line-height:1;letter-spacing:-.035em;tex
       </a>
       <nav aria-label="Main navigation">
         <a class="hide-sm" href="#work">Work</a>
-        <a class="hide-sm" href="#built">Projects</a>
+        <a class="hide-sm" href="#built">Tools</a>
         <a class="hide-sm" href="#background">Background</a>
         <a href="Robin-Gautam-Resume.pdf" target="_blank" rel="noopener">Résumé</a>
         <a class="nav-contact" href="#contact">Contact</a>
@@ -334,7 +395,7 @@ h3{font-size:clamp(2.5rem,3.9vw,4.2rem);line-height:1;letter-spacing:-.035em;tex
       <div class="intro">
         <p class="meta location rise" style="--i:0"><span class="locator" aria-hidden="true"></span> IIM Rohtak <span class="location-rule" aria-hidden="true"></span> MBA, class of 2027</p>
         <h1 id="hero-title" class="rise" style="--i:1">Hi, I’m<br><em>Robin Gautam.</em></h1>
-        <p class="lead rise" style="--i:2">I’m an MBA candidate looking for a full-time role in <strong>B2B sales, marketing or product</strong>. As a sales intern I closed <strong>₹3.5 lakh</strong> in business deals in three months. I also build websites and AI tools that small businesses use every day.</p>
+        <p class="lead rise" style="--i:2">MBA candidate at IIM Rohtak, aiming for a full-time role in <strong>B2B sales, marketing or product</strong>. My last internship was in sales: three months of prospecting and follow-ups that ended in <strong>₹3.5 lakh</strong> of signed business. When a task keeps repeating, my habit is to build a tool for it.</p>
         <div class="actions rise" style="--i:3">
           <a class="button primary" href="#work">See my work</a>
           <a class="text-link" href="Robin-Gautam-Resume.pdf" target="_blank" rel="noopener">View résumé <small>PDF</small></a>
@@ -365,9 +426,8 @@ h3{font-size:clamp(2.5rem,3.9vw,4.2rem);line-height:1;letter-spacing:-.035em;tex
         </div>
         <nav class="case-index" aria-label="Jump to a case">
           <a href="#staplerlabs">B2B sales</a>
+          <a href="#finlatics">Market research</a>
           <a href="#stockgro">Partnerships</a>
-          <a href="#apex">Clinic website</a>
-          <a href="#comex">Pickup website</a>
         </nav>
 
         <article class="dossier reveal" id="staplerlabs" aria-labelledby="sales-title">
@@ -384,12 +444,40 @@ h3{font-size:clamp(2.5rem,3.9vw,4.2rem);line-height:1;letter-spacing:-.035em;tex
           <div class="case-copy">
             <p class="meta category">StaplerLabs · Sales &amp; marketing intern · <span class="nowrap">Apr–Jun 2026</span></p>
             <h3 id="sales-title">From the first pitch<br> to <em><span class="inr">₹</span>3.5 lakh in sales.</em></h3>
-            <p>I found business customers across four states through field visits and digital outreach, pitched to them, followed up and closed the deals myself.</p>
+            <p>Leads came from field visits and online outreach across four states. The deals that closed were ones I pitched, chased and signed myself.</p>
             <dl class="case-facts">
-              <div><dt>2,500+</dt><dd>qualified B2B leads generated</dd></div>
+              <div><dt>2,500+</dt><dd>qualified leads in the pipeline</dd></div>
               <div><dt>8+</dt><dd>pitch decks and sales materials for three client accounts</dd></div>
             </dl>
             <ul class="skills" aria-label="Skills used"><li>Prospecting</li><li>Pitching</li><li>Deal closure</li><li>Sales collateral</li></ul>
+          </div>
+        </article>
+
+        <article class="dossier reveal" id="finlatics" aria-labelledby="fin-title">
+          <div class="exhibit research" aria-hidden="true">
+            <div class="mapcard">
+              <div class="map-head"><span>Finlatics</span><span>Market scan</span></div>
+              <div class="map">
+                <i style="left:14%;top:22%"></i><i style="left:20%;top:30%"></i><i style="left:11%;top:36%"></i><i style="left:24%;top:18%"></i><i style="left:18%;top:42%"></i>
+                <i style="left:62%;top:20%"></i><i style="left:70%;top:28%"></i><i style="left:66%;top:36%"></i><i style="left:76%;top:16%"></i><i style="left:58%;top:30%"></i><i style="left:73%;top:40%"></i>
+                <i style="left:40%;top:68%"></i><i style="left:47%;top:76%"></i><i style="left:35%;top:80%"></i><i style="left:52%;top:66%"></i><i style="left:44%;top:86%"></i>
+                <i style="left:86%;top:74%"></i><i style="left:30%;top:52%"></i><i style="left:90%;top:56%"></i><i style="left:8%;top:84%"></i>
+                <span class="map-ring" style="left:5%;top:9%;width:26%;height:44%"><b>Persona A</b></span>
+                <span class="map-ring" style="left:52%;top:7%;width:30%;height:44%"><b>Persona B</b></span>
+                <span class="map-ring" style="left:29%;top:57%;width:30%;height:38%"><b>Persona C</b></span>
+              </div>
+              <div class="map-foot"><span>20+ firms</span><span>5 industries</span><span>3 hypotheses</span></div>
+            </div>
+          </div>
+          <div class="case-copy">
+            <p class="meta category">Finlatics · Market research analyst · <span class="nowrap">Live project, 2025</span></p>
+            <h3 id="fin-title">Who buys,<br> <em>and why.</em></h3>
+            <p>A live project in customer research. Studying 20+ firms across five industries showed which customers each one served, and those patterns became a set of personas. Surveys then checked three hypotheses about them.</p>
+            <dl class="case-facts">
+              <div><dt>20+</dt><dd>firms studied across five industries</dd></div>
+              <div><dt>3</dt><dd>hypotheses tested through surveys</dd></div>
+            </dl>
+            <ul class="skills" aria-label="Skills used"><li>Market research</li><li>Segmentation</li><li>Survey design</li></ul>
           </div>
         </article>
 
@@ -400,7 +488,7 @@ h3{font-size:clamp(2.5rem,3.9vw,4.2rem);line-height:1;letter-spacing:-.035em;tex
           <div class="case-copy">
             <p class="meta category">StockGro · Campus intern · <span class="nowrap">Aug–Oct 2023</span></p>
             <h3 id="stock-title">Taking investing<br> <em>onto campus.</em></h3>
-            <p>I secured a formal partnership between StockGro and DSEU, then used it to run financial literacy drives and Invest IQ, a stock trading event where students practised what they were learning.</p>
+            <p>The internship produced a formal partnership between StockGro and DSEU. With it in place, the campus hosted financial literacy drives and Invest IQ, a stock trading event where students put their learning to work.</p>
             <dl class="case-facts">
               <div><dt>2,200+</dt><dd>students reached through campus drives</dd></div>
               <div><dt>1,100+</dt><dd>students took part in the activities</dd></div>
@@ -409,46 +497,6 @@ h3{font-size:clamp(2.5rem,3.9vw,4.2rem);line-height:1;letter-spacing:-.035em;tex
           </div>
         </article>
 
-        <article class="dossier reveal" id="apex" aria-labelledby="apex-title">
-          <div class="exhibit web-exhibit clinic">
-            <a class="site-print" href="https://www.apexdentalcare.co.in/" target="_blank" rel="noopener" aria-label="Open the Apex Dental Care website in a new tab">
-              <span class="browser-strip"><i aria-hidden="true"></i>apexdentalcare.co.in<span aria-hidden="true">↗</span></span>
-              <img src="work/apex-dental-care.jpg" loading="lazy" width="1280" height="720" alt="The Apex Dental Care homepage, with appointment booking beside its treatment information.">
-            </a>
-          </div>
-          <div class="case-copy">
-            <p class="meta category">Apex Dental Care · Clinic website · Rohtak</p>
-            <h3 id="apex-title">From a treatment search<br> <em>to an appointment.</em></h3>
-            <p>I built the clinic’s website around the questions patients ask before a first visit: what a treatment involves, which clinic is closer and when it is open. The booking button opens WhatsApp, so there is no form to fill.</p>
-            <dl class="case-facts">
-              <div><dt>8</dt><dd>treatment pages, each written for local search</dd></div>
-              <div><dt>2</dt><dd>clinic locations with their own hours and directions</dd></div>
-            </dl>
-            <ul class="skills" aria-label="Skills used"><li>Website</li><li>Local SEO</li><li>Built with Claude Code</li></ul>
-            <div class="project-actions"><a class="button primary" href="https://www.apexdentalcare.co.in/" target="_blank" rel="noopener">Visit the clinic website <span class="ext" aria-hidden="true">↗</span></a></div>
-          </div>
-        </article>
-
-        <article class="dossier reveal" id="comex" aria-labelledby="comex-title">
-          <div class="exhibit web-exhibit garment">
-            <a class="site-print" href="https://www.comexdrycleaner.com/" target="_blank" rel="noopener" aria-label="Open the Comex Drycleaners website in a new tab">
-              <span class="browser-strip"><i aria-hidden="true"></i>comexdrycleaner.com<span aria-hidden="true">↗</span></span>
-              <img src="work/comex-drycleaner.jpg" loading="lazy" width="1280" height="800" alt="Comex Drycleaners homepage with a photograph of garment pressing and a booking button.">
-            </a>
-          </div>
-          <div class="case-copy">
-            <p class="meta category">Comex Drycleaners · Pickup website · Delhi</p>
-            <h3 id="comex-title">A pickup starts<br> <em>with a price check.</em></h3>
-            <p>Comex has served families in Dwarka for more than 30 years. I built its website so a customer can check the service and price for a blazer or a saree, then book a pickup or ask for a callback.</p>
-            <dl class="case-facts">
-              <div><dt>Prices</dt><dd>listed by garment before anyone books</dd></div>
-              <div><dt>Callback</dt><dd>form for questions about a specific garment</dd></div>
-            </dl>
-            <ul class="skills" aria-label="Skills used"><li>Website</li><li>Lead capture</li><li>Built with Claude Code</li></ul>
-            <div class="project-actions"><a class="button primary" href="https://www.comexdrycleaner.com/" target="_blank" rel="noopener">Visit the pickup website <span class="ext" aria-hidden="true">↗</span></a></div>
-          </div>
-        </article>
-      </div>
     </section>
 
     <!-- TOOLS -->
@@ -456,30 +504,68 @@ h3{font-size:clamp(2.5rem,3.9vw,4.2rem);line-height:1;letter-spacing:-.035em;tex
       <div class="shell">
         <div class="section-head reveal">
           <h2 id="built-title">Tools I’ve <em>built</em></h2>
-          <p class="section-note">I don’t write code by hand. I define the problem, direct Claude Code, test what it produces and put it to use.</p>
+          <p class="section-note">Each one built with Claude Code instead of hand-written code. Most of the effort went into deciding what the tool should do and checking what came out.</p>
         </div>
         <div class="tools">
           <article class="tool reveal">
-            <p class="meta">Personal project</p>
-            <h3>Role Radar</h3>
-            <div class="tool-figure"><b>14</b><span>job boards scanned every morning</span></div>
-            <p>It scores each opening against my profile, emails me a ranked digest and drafts a CV for the role I pick, using only facts I have verified.</p>
-            <p class="note">I caught a fit score stuck at 5.0 because I checked the output instead of trusting it.</p>
-            <ul class="skills" aria-label="Built with"><li>Next.js</li><li>Neon Postgres</li><li>Gemini</li><li>Claude API</li></ul>
+            <div class="tool-art art-radar" aria-hidden="true">
+              <div class="digest paper-shadow">
+                <div class="digest-head"><span>Role Radar</span><span>Morning digest</span></div>
+                <p class="digest-date"><span data-today>Wed 25 Nov</span> · 14 boards</p>
+                <ol>
+                  <li><span><b>Key Account Manager</b><small>Gurugram · B2B software</small></span><span class="fit"><i style="--f:.92;--d:.15s"></i>9.2</span></li>
+                  <li><span><b>Product Associate</b><small>Bengaluru · Fintech</small></span><span class="fit"><i style="--f:.87;--d:.3s"></i>8.7</span></li>
+                  <li><span><b>Brand Marketing Manager</b><small>Mumbai · Consumer goods</small></span><span class="fit"><i style="--f:.81;--d:.45s"></i>8.1</span></li>
+                </ol>
+                <p class="digest-foot">CV drafted for role 1</p>
+              </div>
+            </div>
+            <div class="tool-body">
+              <p class="meta">Personal project</p>
+              <h3>Role Radar</h3>
+              <div class="tool-figure"><b>14</b><span>job boards read every morning</span></div>
+              <p>Openings that fit my profile arrive by email each morning, best first. Pick one and it drafts a CV built only from facts I have checked.</p>
+              <p class="note">Early lesson: the fit score sat at 5.0 for every job until a manual check caught it.</p>
+              <ul class="skills" aria-label="Built with"><li>Next.js</li><li>Neon Postgres</li><li>Gemini</li><li>Claude API</li></ul>
+            </div>
           </article>
+
           <article class="tool reveal">
-            <p class="meta">Team tool</p>
-            <h3>WorkHub</h3>
-            <div class="tool-figure"><b>90%</b><span>lower AI cost per lead report, within a week</span></div>
-            <p>A project management tool for a small team: tasks, a leads pipeline, meeting minutes and daily wrap-ups. When the AI bill rose, I traced it to one report and cut its cost from $3.31 to $0.33.</p>
-            <ul class="skills" aria-label="Skills used"><li>Product</li><li>Cost control</li><li>Claude</li></ul>
+            <div class="tool-art art-cost" aria-hidden="true">
+              <div class="costcard paper-shadow">
+                <div class="cc-head"><span>WorkHub</span><span>AI cost per report</span></div>
+                <div class="cc-bars"><i style="--v:3.38"></i><i style="--v:3.29;--d:.08s"></i><i class="after" style="--v:.36;--d:.16s"></i><i class="after" style="--v:.32;--d:.24s"></i><i class="after" style="--v:.34;--d:.32s"></i><i class="after" style="--v:.31;--d:.4s"></i><i class="after" style="--v:.31;--d:.48s"></i></div>
+                <div class="cc-days"><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span></div>
+                <div class="cc-key"><span>Nov, USD per report</span><b>$3.31 → $0.33</b></div>
+              </div>
+            </div>
+            <div class="tool-body">
+              <p class="meta">Team tool</p>
+              <h3>WorkHub</h3>
+              <div class="tool-figure"><b>90%</b><span>lower AI cost per lead report, in a week</span></div>
+              <p>Project management for a small team, with tasks, leads, meeting minutes and daily <span class="nowrap">wrap-ups</span> in one place. When the AI bill jumped, one lead report turned out to be the cause; a week of fixes took it from $3.31 to $0.33 a run.</p>
+              <ul class="skills" aria-label="Skills used"><li>Product</li><li>Cost control</li><li>Claude</li></ul>
+            </div>
           </article>
+
           <article class="tool reveal">
-            <p class="meta">Clinic tool</p>
-            <h3>Clinic receptionist</h3>
-            <div class="tool-figure"><b><span class="inr">₹</span>3</b><span>per call, in Hindi or English</span></div>
-            <p>A voice receptionist that answers patient calls and books appointment slots. Priced at ₹2,500 a month for 600 calls, about a sixth of the monthly cost of front-desk call handling.</p>
-            <ul class="skills" aria-label="Skills used"><li>Voice AI</li><li>Unit economics</li><li>Healthcare</li></ul>
+            <div class="tool-art art-call" aria-hidden="true">
+              <div class="callcard paper-shadow">
+                <div class="call-head"><i></i>Incoming call · 11:42 am</div>
+                <span class="who">Patient</span>
+                <p class="bubble caller" style="--d:.1s">Namaste, kal subah cleaning ke liye time milega?</p>
+                <span class="who right">Receptionist</span>
+                <p class="bubble agent" style="--d:.5s">Ji, kal 10:30 khali hai. Aapka naam bata dijiye?</p>
+                <div class="call-done"><span>Booked · Thu 10:30</span><span>₹3 call</span></div>
+              </div>
+            </div>
+            <div class="tool-body">
+              <p class="meta">Clinic tool</p>
+              <h3>Clinic receptionist</h3>
+              <div class="tool-figure"><b><span class="inr">₹</span>3</b><span>per call, in Hindi or English</span></div>
+              <p>Answers patient calls in Hindi or English and books the slot. At ₹2,500 a month for 600 calls, it costs about a sixth of a <span class="nowrap">front-desk</span> salary.</p>
+              <ul class="skills" aria-label="Skills used"><li>Voice AI</li><li>Unit economics</li><li>Healthcare</li></ul>
+            </div>
           </article>
         </div>
       </div>
@@ -499,8 +585,8 @@ h3{font-size:clamp(2.5rem,3.9vw,4.2rem);line-height:1;letter-spacing:-.035em;tex
         <div class="campus-copy reveal">
           <p class="meta">Campus leadership · DSEU Dwarka · <span class="nowrap">2022–25</span></p>
           <h2 id="campus-title">Behind <em>Riwaaz.</em></h2>
-          <p>As E-Cell president, I led a 30-member team through more than ten initiatives, signed six brand partnerships and helped organise Riwaaz 2.0, the university’s cultural festival.</p>
-          <p>As placement coordinator for three batches, I worked with recruiters on drives for 2,000+ students, so I have seen hiring from the recruiter’s side.</p>
+          <p>Two years as E-Cell president meant running a 30-member team, more than ten initiatives and six brand partnerships. The biggest of them was Riwaaz 2.0, the university’s largest cultural festival.</p>
+          <p>Placement drives were the other job: three batches, 2,000+ students and a lot of time with recruiters, learning what they look for in a candidate.</p>
           <dl class="campus-facts">
             <div><dt>1,500+</dt><dd>people at Riwaaz 2.0</dd></div>
             <div><dt>6</dt><dd>brand partnerships</dd></div>
@@ -515,7 +601,7 @@ h3{font-size:clamp(2.5rem,3.9vw,4.2rem);line-height:1;letter-spacing:-.035em;tex
       <div class="bg-intro reveal">
         <p class="meta">Education &amp; experience</p>
         <h2 id="bg-title">My <em>background</em></h2>
-        <p class="bio">I studied banking, financial services and insurance at DSEU in Delhi, then joined the MBA at IIM Rohtak, where I major in marketing. Along the way I have worked in sales, market research, content and programme operations.</p>
+        <p class="bio">A BBA in banking, financial services and insurance at DSEU, Delhi, came first, then the MBA at IIM Rohtak with a major in marketing. The internships along the way covered sales, market research, content writing and programme operations.</p>
         <div class="bio-links">
           <a class="inline-link" href="Robin-Gautam-Resume.pdf" download="Robin-Gautam-Resume.pdf">Download my résumé</a>
           <a class="inline-link" href="https://www.linkedin.com/in/robin-gautam-066ba8233/" target="_blank" rel="noopener">LinkedIn profile <span class="ext" aria-hidden="true">↗</span></a>
@@ -538,7 +624,7 @@ h3{font-size:clamp(2.5rem,3.9vw,4.2rem);line-height:1;letter-spacing:-.035em;tex
         <div class="contact-copy reveal">
           <p class="meta">Full-time · from March 2027</p>
           <h2 id="contact-title">Get in <em>touch.</em></h2>
-          <p>I’m looking for a full-time role in B2B sales, marketing or product, working closely with customers. Open to Delhi NCR, Mumbai, Bengaluru, Hyderabad, Pune and Chandigarh.</p>
+          <p>Looking for a full-time role in B2B sales, marketing or product, close to the customer. Happy to work from Delhi NCR, Mumbai, Bengaluru, Hyderabad, Pune or Chandigarh.</p>
         </div>
         <div class="address-card reveal">
           <div class="address-top"><span class="meta">Correspondence</span><img src="logo.svg" width="46" height="32" alt=""></div>
@@ -592,6 +678,12 @@ const caseLinks = [...document.querySelectorAll('.case-index a')];
 spy(caseLinks, caseLinks.map((a) => document.querySelector(a.getAttribute('href'))), '-45% 0px -50% 0px');
 const navLinks = [...document.querySelectorAll('.header nav a[href^="#"]:not(.nav-contact)')];
 spy(navLinks, navLinks.map((a) => document.querySelector(a.getAttribute('href'))), '-40% 0px -55% 0px');
+
+// Today's date on the Role Radar digest
+const today = new Date();
+document.querySelectorAll('[data-today]').forEach((el) => {
+  el.textContent = today.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' }).replace(',', '');
+});
 
 // Copy the email address
 const emailButton = document.querySelector('.copy-email');

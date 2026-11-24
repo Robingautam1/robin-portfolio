@@ -20,6 +20,5 @@ Import this repository, choose the **Other** framework preset, leave the build s
 - `index.html`: the page, with its styles and script inline
 - `logo.svg`, `favicon.svg`: the robin-and-sun mark, traced from the hero illustration
 - `robin-illustration.webp`, `og-image.jpg`: the hero illustration and its link-preview copy
-- `work/`: homepage captures of the Apex Dental Care and Comex Drycleaners websites
 - `Robin-Gautam-Resume.pdf`: the résumé behind every résumé link
 - `fonts/`: Instrument Serif and DM Sans, SIL Open Font License (see `fonts/OFL.txt`)
