@@ -1,6 +1,6 @@
 # robin-portfolio
 
-Personal site of **Robin Gautam**, MBA candidate at IIM Rohtak (class of 2027): B2B sales, campus partnerships and websites for local businesses.
+Personal site of **Robin Gautam**, MBA candidate at IIM Rohtak (class of 2027), available from March 2027 for roles in B2B sales, marketing and product.
 
 A single static page (HTML, CSS and a little JavaScript). No build step.
 
@@ -18,7 +18,8 @@ Import this repository, choose the **Other** framework preset, leave the build s
 ## Files
 
 - `index.html`: the page, with its styles and script inline
-- `robin-illustration.webp`: the robin illustration in the hero
+- `logo.svg`, `favicon.svg`: the robin-and-sun mark, traced from the hero illustration
+- `robin-illustration.webp`, `og-image.jpg`: the hero illustration and its link-preview copy
 - `work/`: homepage captures of the Apex Dental Care and Comex Drycleaners websites
-- `Robin-Gautam-Resume.pdf`: the résumé behind "View résumé" and "Download my résumé"
-- `fonts/`: Instrument Serif and DM Sans, both SIL Open Font License (licence text is kept inside `index.html`)
+- `Robin-Gautam-Resume.pdf`: the résumé behind every résumé link
+- `fonts/`: Instrument Serif and DM Sans, SIL Open Font License (see `fonts/OFL.txt`)
