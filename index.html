@@ -95,6 +95,17 @@ h1 em{color:var(--red);font-weight:400;white-space:nowrap}
 .print:hover{transform:rotate(1.5deg) translateY(-4px)}
 .print img{display:block;width:100%;height:auto;aspect-ratio:1140/855;object-fit:cover}
 
+/* laptops and desktops: the introduction fills exactly one screen, so the next section never peeks in */
+@media (min-width:900px) and (orientation:landscape){
+  .hero{min-height:calc(100vh - 78px);min-height:calc(100svh - 78px);padding-block:clamp(20px,4.5vh,64px)}
+  h1{font-size:clamp(3.6rem,min(7.95vw,13.5vh),8rem);margin-bottom:clamp(14px,2.8vh,26px)}
+  .lead{font-size:clamp(1rem,1.85vh,1.1rem)}
+  .lead p+p{margin-top:clamp(6px,1.2vh,10px)}
+  .roles{margin-top:clamp(12px,2.6vh,22px)}
+  .actions{margin-top:clamp(14px,3vh,26px)}
+  .print-wrap{width:min(94%,calc((100svh - 78px - 110px) * 1.3))}
+}
+
 /* ---------- sections ---------- */
 .section{border-top:1px solid var(--rule);padding:60px 0 76px}
 .section-head{margin-bottom:28px}
